@@ -3,19 +3,19 @@
   ActiveRecord\Connection::$datetime_format = 'Y-m-d H:i:s';
 
   //Globais
-  $configs->title = 'HXPHP Framework';
+  $configs->title = 'Sistema de Login HXPHP';
 
   //Configurações de Ambiente - Desenvolvimento
   $configs->env->add('development');
 
-  $configs->env->development->baseURI = '/';
+  $configs->env->development->baseURI = '/hxphp_login/';
 
   $configs->env->development->database->setConnectionData([
     'driver' => env('DB_DRIVER', 'mysql'),
-    'host' => env('MYSQL_HOST', 'mysql'),
-    'user' => env('MYSQL_USER', 'dev'),
-    'password' => env('MYSQL_PASSWORD', 'dev'),
-    'dbname' => env('MYSQL_DATABASE', 'hxphp'),
+    'host' => env('MYSQL_HOST', 'localhost'),
+    'user' => env('MYSQL_USER', 'root'),
+    'password' => env('MYSQL_PASSWORD', ''),
+    'dbname' => env('MYSQL_DATABASE', 'db_hxphplogin'),
     'charset' => env('MYSQL_CHARSET', 'utf8')
   ]);
 /*
